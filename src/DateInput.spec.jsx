@@ -778,7 +778,7 @@ describe('DateInput', () => {
     expect(onChange).toHaveBeenCalledWith(null, false);
   });
 
-  it('calls onInvalidInput when modified to invalid input', () => {
+  it('triggers onInvalidEntry when modified to invalid input', () => {
     const onChange = jest.fn();
     const onInvalidEntry = jest.fn();
     const date = new Date(2017, 8, 30);
@@ -801,7 +801,7 @@ describe('DateInput', () => {
     expect(onInvalidEntry).toHaveBeenCalledTimes(1);
   });
 
-  it('calls does not onInvalidInput when modified to valid input', () => {
+  it('does not call onInvalidEntry when modified to valid input', () => {
     const onChange = jest.fn();
     const onInvalidEntry = jest.fn();
     const date = new Date(2017, 8, 30);
